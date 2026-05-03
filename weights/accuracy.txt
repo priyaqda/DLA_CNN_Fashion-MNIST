@@ -1,0 +1,16 @@
+Model: LeNet-5
+Dataset: Fashion-MNIST
+Final test accuracy: 88.40%
+Best test accuracy: 88.90%
+Total parameters: 44,426
+
+Epoch 1: loss=0.7404 train_acc=72.02% test_acc=79.30%
+Epoch 2: loss=0.4792 train_acc=82.02% test_acc=82.94%
+Epoch 3: loss=0.4163 train_acc=84.53% test_acc=84.66%
+Epoch 4: loss=0.3721 train_acc=86.28% test_acc=86.34%
+Epoch 5: loss=0.3425 train_acc=87.39% test_acc=86.11%
+Epoch 6: loss=0.3188 train_acc=88.24% test_acc=86.31%
+Epoch 7: loss=0.3012 train_acc=88.78% test_acc=87.61%
+Epoch 8: loss=0.2869 train_acc=89.39% test_acc=87.64%
+Epoch 9: loss=0.2707 train_acc=89.92% test_acc=88.90%
+Epoch 10: loss=0.2617 train_acc=90.22% test_acc=88.40%

@@ -1,0 +1,92 @@
+============================================================
+  WEIGHT SUMMARY - LeNet-5 Fashion-MNIST
+============================================================
+
+Layer: conv1_weight
+  Shape          : (6, 1, 5, 5)
+  Elements       : 150
+  FP32 range     : [-0.5739, 0.5185]
+  INT8 range     : [-127, 127]
+  Scale(s)       : [0.00397328 0.00354822 0.00243924 0.00411741]...
+  Quant MSE      : 0.00000113
+
+Layer: conv1_bias
+  Shape          : (6,)
+  Elements       : 6
+  FP32 range     : [-0.6280, 0.2518]
+  INT8 range     : [-1073741824, 430571360]
+  Scale(s)       : [5.84855497e-10]
+
+Layer: conv2_weight
+  Shape          : (16, 6, 5, 5)
+  Elements       : 2,400
+  FP32 range     : [-0.8427, 0.6191]
+  INT8 range     : [-127, 127]
+  Scale(s)       : [0.00272772 0.00463573 0.00089974 0.00470622]...
+  Quant MSE      : 0.00000167
+
+Layer: conv2_bias
+  Shape          : (16,)
+  Elements       : 16
+  FP32 range     : [-0.2080, 0.2522]
+  INT8 range     : [-885638848, 1073741824]
+  Scale(s)       : [2.34890385e-10]
+
+Layer: fc1_weight
+  Shape          : (120, 256)
+  Elements       : 30,720
+  FP32 range     : [-0.7595, 0.6292]
+  INT8 range     : [-127, 127]
+  Scale(s)       : [0.00224277 0.00421532 0.00425072 0.0040277 ]...
+  Quant MSE      : 0.00000083
+
+Layer: fc1_bias
+  Shape          : (120,)
+  Elements       : 120
+  FP32 range     : [-0.1677, 0.2570]
+  INT8 range     : [-700565056, 1073741824]
+  Scale(s)       : [2.39370829e-10]
+
+Layer: fc2_weight
+  Shape          : (84, 120)
+  Elements       : 10,080
+  FP32 range     : [-0.6773, 0.6653]
+  INT8 range     : [-127, 127]
+  Scale(s)       : [0.00260628 0.00269035 0.00315499 0.00315242]...
+  Quant MSE      : 0.00000064
+
+Layer: fc2_bias
+  Shape          : (84,)
+  Elements       : 84
+  FP32 range     : [-0.1981, 0.3473]
+  INT8 range     : [-612452672, 1073741824]
+  Scale(s)       : [3.23435057e-10]
+
+Layer: fc3_weight
+  Shape          : (10, 84)
+  Elements       : 840
+  FP32 range     : [-0.8746, 0.4195]
+  INT8 range     : [-127, 102]
+  Scale(s)       : [0.00396382 0.0047722  0.00471278 0.00407051]...
+  Quant MSE      : 0.00000170
+
+Layer: fc3_bias
+  Shape          : (10,)
+  Elements       : 10
+  FP32 range     : [-0.1925, 0.2277]
+  INT8 range     : [-907677376, 1073741824]
+  Scale(s)       : [2.1208714e-10]
+
+============================================================
+Total parameters : 44,426
+FP32 size        : 173.5 KB
+INT8 size        : 44.1 KB
+Compression      : 3.9x
+============================================================
+
+FILE MAP - untuk Verilog integration:
+
+  lenet5_int8.hex    -> $readmemh ke weight ROM
+  lenet5_scales.hex  -> scale factors untuk dequant output
+  lenet5_int8.npy    -> Python verification (numpy)
+  lenet5_fp32.npy    -> FP32 baseline (referensi)
